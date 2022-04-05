@@ -9,13 +9,13 @@ function calcShipping(sum, min, shipping) {
     let shippingSum ;
 
     if(productsSum = 0) {
-        console.log(shippingSum = 0);
+    shippingSum = 0;
     }
     if(productsSum >= freeShippingMinSum) {
-        console.log(shippingSum = 0);
+    shippingSum = 0;
     }
     if(productsSum > 0 && productsSum < freeShippingMinSum){
-        console.log(shippingSum = shippingPrice);
+    shippingSum = shippingPrice;
     }
 
     // если productsSum равно 0,

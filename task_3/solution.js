@@ -21,7 +21,7 @@ itemCountText = itemCountText + product.count;    // 2. Присвойте пе�
 itemCountText = itemCountText + `x`;    // 3. Присвойте переменной itemCountText результат склеивания itemCountText и ` × `
 itemCountText = itemCountText + product.price;    // 4. Присвойте переменной itemCountText результат склеивания itemCountText и цены
 itemCountText = itemCountText + `₽ =`;    // 5. Присвойте переменной itemCountText результат склеивания itemCountText и ` ₽ = `
-let sum = product.count * product.price;    // 6. Создайте переменную sum и присвойте ей значение произведения количества и цены
+let sum = product.count × product.price;    // 6. Создайте переменную sum и присвойте ей значение произведения количества и цены
 itemCountText = itemCountText + sum;    // 7. Присвойте переменной itemCountText результат склеивания itemCountText и sum
 itemCountText = itemCountText + `₽ =`;    // 8. Присвойте переменной itemCountText результат склеивания itemCountText и ` ₽`
 

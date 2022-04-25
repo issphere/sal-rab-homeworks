@@ -34,9 +34,8 @@
 // }
 
 function sendRequest(name, phone, address, goods, sum) {
-    let data = {client: ${name + phone},
-    order: ${address},
-    sum: ${sum},
+    let data = {client: name + phone,
+    order: {address: "", sum: 1},
     goods: []
 };
 

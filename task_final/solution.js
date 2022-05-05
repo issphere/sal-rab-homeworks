@@ -34,25 +34,31 @@
 // }
 
 function sendRequest(name, phone, address, goods, sum) {
-    let data = {client: name + phone,
-    order: {
-        address: address, 
-        sum: sum
-    },
-    goods: [
-        {title: title, count: count}
-    ]
-};
+    let data = {
+        client: name + phone,
+        order: {
+            address: {street, house, entrance, floor, flat}, 
+            sum: sum
+        },
+        goods: [
+            {title: title, count: count}
+        ]
+    };
 
     let countOfGoods = goods.length;
 
     for (let i = 0; i <= countOfGoods; i += 1) {
-        data.goods.push(goods[i].title, goods[i].count);
-        data.order.address = {street, house, entrance, floor, flat};
+        data.goods.push(
+            {title: goods[i].title, 
+            count: goods[i].count
+            }
+        );
+        data.order.address = JSON.stringify({address});
         data.order.sum = sum;
         data.client = 'Иван +7(987)65-43-210';
     }
+    
     let jsonData = JSON.stringify(data);
+    return jsonData
 
-    return jsonData;
 }

@@ -53,7 +53,7 @@ function sendRequest(name, phone, address, goods, sum) {
             count: goods[i].count
             }
         );
-        data.order.address = JSON.stringify({address});
+        data.order.address = JSON.stringify(address);
         data.order.sum = sum;
         data.client = 'Иван +7(987)65-43-210';
     }

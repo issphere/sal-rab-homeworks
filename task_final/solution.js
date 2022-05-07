@@ -45,17 +45,14 @@ function sendRequest(name, phone, address, goods, sum) {
             }
         )
     };
-    data = {
-        data: {
-            client: name + phone,
-            order: {
-                address: ${address.street} + ${address.house} + ${address.entrance} + ${address.floor} + ${address.flat},
-                sum: sum
-            }
+    {
+    data: {
+        client: name + " " + phone;
+        order: {
+            address: `ул. " " ${address.street}," " дом " " ${address.house}, " " подъезд " "  ${address.entrance}, " " этаж ${address.floor}, " " кв." " ${address.flat},
+            sum: sum
         }
-    }   
-
+    }
     let jsonData = JSON.stringify(data);
     return jsonData
-
 }
